@@ -2,7 +2,7 @@ link to deployed live version : https://wsdproject1projectapp.herokuapp.com/proj
 
 
 
-User guide
+User guide (outdated)
 ===============
 
 If you wish to test the live version you can visit the link on
