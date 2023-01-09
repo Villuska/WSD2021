@@ -1,4 +1,4 @@
-link to deployed live version : https://wsdproject1projectapp.herokuapp.com/projects
+link to deployed live version : https://wsdproject1projectapp.herokuapp.com/projects (outdated)
 
 
 
