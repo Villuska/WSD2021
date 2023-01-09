@@ -1,0 +1,35 @@
+<% layout("./layouts/layout.eta") %>
+
+<h1>Current project:  <%=it.project.name %></h1>
+
+<a href="/projects">Back to main page</a>
+
+<h3>On this page you can add issues to the project, delete said issues,<br> 
+remove the entire project or return to the main "projects" page </h3>
+
+<form action="/projects/<%= it.project.id %>" method="POST">
+  <input type="submit" value="Remove project!" />
+</form>
+
+<h2>Add an issue with the project</h2>
+
+<form action="/projects/<%= it.project.id %>/issues" method="POST">
+  <input type = "text" name = "description" placeholder="Description"/>
+  <input type="submit" value="Add issue" />
+</form> 
+
+
+
+<h2>Current issues</h2>
+
+
+<ul>
+<% it.allIssues.forEach((issue) => { %>
+  <li>
+    <%= issue.description%>
+    <form method="POST" action="/projects/<%= it.project.id %>/issues/<%= issue.id %>">
+      <input type="submit" value="Resolve issue" />
+    </form>
+    </li>
+<% }); %>
+</ul>
